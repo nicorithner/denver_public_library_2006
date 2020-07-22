@@ -2,7 +2,7 @@ class Library
   attr_reader :name, :books, :authors
   def initialize(name)
     @name = name
-    @books = [].flatten
+    @books = []
     @authors = []
   end
 
@@ -10,5 +10,7 @@ class Library
     @authors << author
     @books << author.books
   end
-  
+  def books
+    @books.flatten
+  end
 end
