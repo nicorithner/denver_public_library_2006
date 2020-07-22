@@ -1,6 +1,7 @@
 class Book
-  def initialize(info)
-    
+  attr_reader :title
+  def initialize(data)
+    @title = data[:title]
   end
 
 
