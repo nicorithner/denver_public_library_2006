@@ -16,12 +16,12 @@ class Library
 
   def publication_time_frame_for(author)
    range = {}
-  #  binding.pry
     finish = author.books.max_by {|book| book.publication_year}
+    finish.publication_year
     start = author.books.min_by {|book| book.publication_year}
-    range[:start] = start
-    range[:end] = finish
-
+    range[:start] = start.publication_year
+    range[:end] = finish.publication_year
+    
     return range
   end
 end
