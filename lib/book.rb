@@ -6,8 +6,7 @@ class Book
     @author_last_name = data[:author_last_name]
     @author = "#{@author_first_name} #{@author_last_name}"
     @publication_date = data[:publication_date]
-    @publication_year = @publication_date.slice(9..12)
+    @publication_year = @publication_date.split(" ").last
   end
-
 
 end

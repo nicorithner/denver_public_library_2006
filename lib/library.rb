@@ -13,4 +13,15 @@ class Library
   def books
     @books.flatten
   end
+
+  def publication_time_frame_for(author)
+   range = {}
+  #  binding.pry
+    finish = author.books.max_by {|book| book.publication_year}
+    start = author.books.min_by {|book| book.publication_year}
+    range[:start] = start
+    range[:end] = finish
+
+    return range
+  end
 end
